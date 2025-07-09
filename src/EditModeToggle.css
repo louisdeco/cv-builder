@@ -20,6 +20,6 @@
     padding: 0.5rem;
 }
 
-.mode-button:hover {
+.highlighted {
     background-color: #f3f4f6;
 }
