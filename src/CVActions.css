@@ -1,0 +1,30 @@
+.cv-actions {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+}
+
+.clear-icon {
+    font-size: 1.3rem
+}
+
+.action-button {
+    background-color: inherit;
+    border: none;
+    display: flex;
+    font-size: calc(0.8rem + 0.2vw);
+    font-weight: 500;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 3rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.clear-button {
+    color: #BF0A30;
+}
+
+.load-button {
+    background-color: #f3f4f6;
+}
