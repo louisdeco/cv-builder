@@ -1,0 +1,26 @@
+.cv-personal-info {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    font-weight: 370;
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: 450;
+}
