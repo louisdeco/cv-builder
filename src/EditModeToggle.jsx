@@ -5,9 +5,6 @@ function EditModeToggle ({ onChange, currentMode }) {
 
     return (
         <div className = "edit-mode-toggle">
-            <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@500&icon_names=assignment,design_services" rel="stylesheet" />
-
-            
             <button className={getButtonClass('content')} onClick={onChange}>
                 <span className="material-symbols-outlined">assignment</span>
                 <span>Content</span>
