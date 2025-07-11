@@ -1,9 +1,9 @@
 import CVPersonalInfo from './CVPersonalInfo.jsx'
 
-function CVEditContent() {
+function CVEditContent({ personalInfo, onPersonalFieldChange }) {
     return (
         <div className="cv-edit-content">
-            <CVPersonalInfo />
+            <CVPersonalInfo personalInfo={personalInfo} onPersonalFieldChange={onPersonalFieldChange}/>
         </div>
     )
 }
