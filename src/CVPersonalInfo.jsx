@@ -16,7 +16,7 @@ function CVPersonalInfo({ personalInfo, onPersonalFieldChange }) {
             </div>
             <div className="input-group">
                 <label htmlFor="address">Address</label>
-                <input type="text" id="address" name="address" autoComplete="street-address" value={personalInfo.address} onChange={'address'}/>
+                <input type="text" id="address" name="address" autoComplete="street-address" value={personalInfo.address} onChange={onPersonalFieldChange('address')}/>
             </div>
 
         </form>
