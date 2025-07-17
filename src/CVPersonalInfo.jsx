@@ -4,8 +4,10 @@ function CVPersonalInfo({ personalInfo, onPersonalFieldChange }) {
     return (
         <form className="cv-personal-info">
             <h2>Personal Details</h2>
-            <label htmlFor="full-name">Full name</label>
-            <input type="text" id="full-name" name="full-name" autoComplete="name" value={personalInfo.fullName} onChange={onPersonalFieldChange('fullName')}/>
+            <div className="input-group">
+                <label htmlFor="full-name">Full name</label>
+                <input type="text" id="full-name" name="full-name" autoComplete="name" value={personalInfo.fullName} onChange={onPersonalFieldChange('fullName')}/>
+            </div>
             <div className="input-group">
                 <label htmlFor="email">Email</label>
                 <input type="mail" id="email" name="email" autoComplete="email" value={personalInfo.email} onChange={onPersonalFieldChange('email')}/>
