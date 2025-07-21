@@ -1,0 +1,14 @@
+.cv-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    gap: 0.2rem;
+}
+
+.cv-section.no-animate,
+.cv-section.no-animate * {
+    transition: none !important;
+    animation: none !important;
+}

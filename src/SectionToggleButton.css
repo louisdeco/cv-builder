@@ -1,0 +1,31 @@
+.section-toggle-button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+span {
+    transition: all 0.5s;
+}
+
+.expand-circle-up {
+    rotate: 180deg;
+}
+
+.list-add {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}

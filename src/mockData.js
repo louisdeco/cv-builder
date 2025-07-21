@@ -8,6 +8,7 @@ export const sampleCV = {
     experience: [
         {
             id: 2,
+            isVisible: true,
             company: "Mistral AI",
             location: "Paris",
             position: "Senior Data Scientist",
@@ -17,6 +18,7 @@ export const sampleCV = {
         },
         {
             id: 1,
+            isVisible: true,
             company: "Deepki",
             location: "Paris",
             position: "Data Scientist",
@@ -28,6 +30,7 @@ export const sampleCV = {
     education: [
         {
             id: 1,
+            isVisible: true,
             institution: "CentraleSupélec",
             location: "Paris",
             degree: "Msc. Computer Sciences",
