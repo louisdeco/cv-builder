@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './ItemList.css'
 import ItemCard from './ItemCard.jsx'
 

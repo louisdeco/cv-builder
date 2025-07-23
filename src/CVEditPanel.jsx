@@ -9,7 +9,6 @@ function CVEditPanel({ currentMode }) {
     const [personalInfo, setPersonalInfo] = useState(sampleCV.personalInfo);
     const [experience, setExperience] = useState(sampleCV.experience);
     const [education, setEducation] = useState(sampleCV.education);
-    console.log(experience)
 
     function handlePersonalFieldChange(fieldName) {
         return (e) => {

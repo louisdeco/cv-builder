@@ -1,0 +1,64 @@
+.education-form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.buttons-main {
+    display: flex;
+    gap: 1rem;
+}
+
+.experience-form > .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.buttons button {
+    font-weight: 490;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}   
+
+.delete {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #6f6f6f;
+    border: 1px solid black;
+    gap: 0.2rem;
+}
+
+.cancel {
+    background-color: white;
+    border: 1px solid black;
+    color: #6f6f6f;
+}
+
+.save {
+    background-color: #187ff5;
+    border: none;
+    color: white;
+}
+
+textarea {
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    font-weight: 370;
+    font-size: 0.9rem;
+}
+

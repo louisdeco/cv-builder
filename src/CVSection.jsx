@@ -3,6 +3,7 @@ import './CVSection.css'
 import SectionToggleButton from './SectionToggleButton.jsx'
 import ItemList from './ItemList.jsx'
 import ExperienceForm from './ExperienceForm.jsx'
+import EducationForm from './EducationForm.jsx'
 
 function CVSection({ items, sectionType, onToggleVisibility, onExperienceFieldSave, onExperienceDelete}) {
     const sectionConfig = {
@@ -16,6 +17,7 @@ function CVSection({ items, sectionType, onToggleVisibility, onExperienceFieldSa
             iconName: 'school',
             name: 'Education',
             displayField: 'institution',
+            FormComponent: EducationForm
         }
     };
 
@@ -70,7 +72,7 @@ function CVSection({ items, sectionType, onToggleVisibility, onExperienceFieldSa
         <div className={getSectionClass()}>
             <SectionToggleButton iconName={iconName} text={name} viewState={viewState} onClick={handleToggle} />
             {viewState.mode === 'list' && <ItemList items={items} displayField={displayField} name={name} onToggleVisibility={onToggleVisibility} onEditClick={handleEditClick} onAddClick={handleAddClick} />}
-            {viewState.mode === 'add' && <ExperienceForm item={selectedItem} onSave={handleSaveForm} onClose={handleCloseForm} onDelete={handleDeleteForm} />}
+            {viewState.mode === 'add' && <FormComponent item={selectedItem} onSave={handleSaveForm} onClose={handleCloseForm} onDelete={handleDeleteForm} />}
         </div>
     )
 }
