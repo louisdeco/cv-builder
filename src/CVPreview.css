@@ -1,0 +1,9 @@
+.cv-preview {
+    flex: 1;
+    aspect-ratio: 1 / 1.414;
+    background-color: white;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
