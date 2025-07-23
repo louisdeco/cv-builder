@@ -17,11 +17,15 @@ function CVEditPanel({ currentMode }) {
         }
     }
 
-    function handleExperienceVisibilityToggle(itemId) {
-        setExperience(experience.map(item =>
-            item.id === itemId ? { ...item, isVisible: !item.isVisible} : item
-        ))
+    function createVisibilityToggleHandler(items, setItem) {
+        return (itemId) => {
+            setItem(items.map(item =>
+                item.id === itemId ? { ...item, isVisible: !item.isVisible} : item
+            ))
+        }
     }
+    const handleExperienceVisibilityToggle = createVisibilityToggleHandler(experience, setExperience);
+    const handleEducationVisibilityToggle = createVisibilityToggleHandler(education, setEducation);
 
     function handleExperienceSave(itemState) {
         if (experience.find(item => item.id === itemState.id)) {
@@ -45,7 +49,7 @@ function CVEditPanel({ currentMode }) {
     return (
         <div className="cv-edit-panel">
             <CVActions />
-            {currentMode === 'content' && <CVEditContent personalInfo={personalInfo} onPersonalFieldChange={handlePersonalFieldChange} experience={experience} onExperienceVisibilityToggle={handleExperienceVisibilityToggle} onExperienceFieldSave={handleExperienceSave} onExperienceDelete={handleExperienceDelete}/>}
+            {currentMode === 'content' && <CVEditContent personalInfo={personalInfo} onPersonalFieldChange={handlePersonalFieldChange} experience={experience} onExperienceVisibilityToggle={handleExperienceVisibilityToggle} onEducationVisibilityToggle={handleEducationVisibilityToggle} onExperienceFieldSave={handleExperienceSave} onExperienceDelete={handleExperienceDelete} education={education}/>}
             {currentMode === 'customize' && <h1>Customize!</h1>}
         </div>
     )
