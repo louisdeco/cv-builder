@@ -5,7 +5,7 @@ import ItemList from './ItemList.jsx'
 import ExperienceForm from './ExperienceForm.jsx'
 import EducationForm from './EducationForm.jsx'
 
-function CVSection({ items, sectionType, onToggleVisibility, onExperienceFieldSave, onExperienceDelete}) {
+function CVSection({ items, sectionType, onToggleVisibility, onFieldSave, onDelete}) {
     const sectionConfig = {
         experience: {
             iconName: 'business_center',
@@ -43,12 +43,12 @@ function CVSection({ items, sectionType, onToggleVisibility, onExperienceFieldSa
     }
     
     function handleSaveForm(itemState) {
-        onExperienceFieldSave(itemState);
+        onFieldSave(itemState);
         handleCloseForm()
     }
     
     function handleDeleteForm(itemState) {
-        onExperienceDelete(itemState);
+        onDelete(itemState);
         handleCloseForm()
 
     }

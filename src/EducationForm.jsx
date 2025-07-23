@@ -9,10 +9,10 @@ function EducationForm({ item, onSave, onClose, onDelete }) {
             setItemState({...itemState, [fieldName]: e.target.value})
         }
     }
-    // function handleSave(e) {
-    //     e.preventDefault();
-    //     onSave(itemState);
-    // }
+    function handleSave(e) {
+        e.preventDefault();
+        onSave(itemState);
+    }
     return (
         <div className="education-form">
             <div className="input-group">
@@ -35,13 +35,13 @@ function EducationForm({ item, onSave, onClose, onDelete }) {
                 <input type="text" id="location" name="location" defaultValue={item?.location} onChange={handleEducationFieldChange('location')} />
             </div>
             <div className="buttons">
-                <button className="delete">
+                <button className="delete" onClick={() => onDelete(itemState)}>
                     <span className="material-symbols-outlined" type="button" >delete</span>
                     <span>Delete</span>
                 </button>
                 <div className="buttons-main">
                     <button className="cancel" type="button" onClick={onClose}>Cancel</button>
-                    <button className="save">Save</button>
+                    <button className="save" onClick={handleSave}>Save</button>
                 </div>
             </div>
         </div>
