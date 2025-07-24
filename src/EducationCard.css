@@ -1,0 +1,11 @@
+.education-card {
+    display: flex;
+    gap: 3rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-weight: 350;
+}
+.institution {
+    font-size: 1.1rem;
+    font-weight: 550;
+}
