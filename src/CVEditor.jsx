@@ -66,7 +66,7 @@ function CVEditor() {
         <div className="cv-editor">
             <EditModeToggle onChange={handleChange} currentMode={currentMode}/>
             <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} />
-            <CVPreview />
+            <CVPreview personalInfo={personalInfo} />
         </div>
     )
 }

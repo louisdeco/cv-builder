@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import './CVEditPanel.css'
 import CVActions from './CVActions.jsx'
 import CVEditContent from './CVEditContent.jsx'
-import { sampleCV } from './mockData.js'
 
 function CVEditPanel({ personalInfo, experience, education, currentMode, handlePersonalFieldChange, handleExperienceVisibilityToggle, handleEducationVisibilityToggle, handleExperienceSave, handleEducationSave, handleExperienceDelete, handleEducationDelete }) {
 

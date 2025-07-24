@@ -1,0 +1,29 @@
+.cv-header {
+    background-color: #3a5874;
+    color: white;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-name {
+    margin-bottom: 0.6rem;
+}
+
+.details-wrapper {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+.cv-header .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.information-wrapper {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
