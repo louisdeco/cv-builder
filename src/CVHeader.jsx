@@ -1,10 +1,11 @@
 import './CVHeader.css'
 
-function CVHeader({ personalInfo }) {
+function CVHeader({ personalInfo, layout }) {
+    const getAddressClass = () => `details-wrapper ${layout === 'top' ? '' : 'col'}`
     return (
         <div className="cv-header">
             <h1 className="full-name">{personalInfo.fullName}</h1>
-            <address className="details-wrapper">
+            <address className={getAddressClass()}>
                 <div className="information-wrapper">
                     {personalInfo.email && <span className="material-symbols-outlined">mail</span>}
                     <p>{personalInfo.email}</p>

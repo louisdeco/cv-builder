@@ -12,6 +12,11 @@ function CVEditor() {
     const [personalInfo, setPersonalInfo] = useState(sampleCV.personalInfo);
     const [experience, setExperience] = useState(sampleCV.experience);
     const [education, setEducation] = useState(sampleCV.education);
+    const [layout, setLayout] = useState('top');
+
+    function handleLayoutChange(newLayout) {
+        setLayout(newLayout);
+    }
 
     function handleChange() {
         setCurrentMode(currentMode === 'content' ? 'customize' : 'content')
@@ -65,8 +70,8 @@ function CVEditor() {
     return (
         <div className="cv-editor">
             <EditModeToggle onChange={handleChange} currentMode={currentMode}/>
-            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} />
-            <CVPreview personalInfo={personalInfo} education={education} experience={experience} />
+            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} onLayoutChange={handleLayoutChange} />
+            <CVPreview personalInfo={personalInfo} education={education} experience={experience} layout={layout} />
         </div>
     )
 }

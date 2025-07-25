@@ -1,0 +1,41 @@
+.cv-change-layout {
+    background-color: white;
+    border-radius: 0.6rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttons-layout-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.cv-change-layout button {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+.visual {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.4rem;
+    border: 1px solid grey;
+}
+
+.top {
+    background: linear-gradient(to top, transparent 50%, #3a5874 50%);
+}
+
+.right {
+    background: linear-gradient(to right, transparent 50%, #3a5874 50%);
+}
+
+.left {
+    background: linear-gradient(to left, transparent 50%, #3a5874 50%);
+}

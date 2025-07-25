@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .full-name {
@@ -16,6 +17,11 @@
     gap: 1rem;
     font-size: 0.8rem;
     font-style: normal;
+}
+
+.cv-header .col {
+    flex-direction: column;
+    align-items: center;
 }
 
 .cv-header .material-symbols-outlined {

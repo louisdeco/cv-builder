@@ -3,7 +3,7 @@ export const sampleCV = {
         fullName: "John Doe",
         email: "john.doe@email.com",
         phone: "+33 6 19 21 76 28",
-        address: "237 rue Saint-Martin, Paris, 75003",
+        address: "Paris, France, 75003",
     },
     experience: [
         {
