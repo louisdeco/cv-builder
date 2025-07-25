@@ -1,5 +1,5 @@
 .cv-header {
-    background-color: #3a5874;
+    background-color: var(--accent-color, #3a5874);
     color: white;
     padding: 2rem 4rem;
     display: flex;

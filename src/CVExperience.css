@@ -3,8 +3,8 @@
 }
 
 .section-title {
- color: #3a5874;
- background-color: rgba(58, 88, 116, 0.2);
+ color: var(--accent-color, #3a5874);
+ background-color: color-mix(in srgb, var(--accent-color, #3a5874) 20%, transparent);
  text-align: center;
  padding: 0.1rem 0;
 }

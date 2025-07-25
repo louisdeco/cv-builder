@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import EditModeToggle from './EditModeToggle.jsx'
 import CVEditPanel from './CVEditPanel.jsx'
 import CVPreview from './CVPreview.jsx'
@@ -13,6 +13,16 @@ function CVEditor() {
     const [experience, setExperience] = useState(sampleCV.experience);
     const [education, setEducation] = useState(sampleCV.education);
     const [layout, setLayout] = useState('top');
+    const [color, setColor] = useState('#0e374e');
+
+    useEffect(() => {
+        document.documentElement.style.setProperty('--accent-color', color)
+    }, [])
+
+    function handleColorChange(newColor) {
+        setColor(newColor)
+        document.documentElement.style.setProperty('--accent-color', newColor);
+    }
 
     function handleLayoutChange(newLayout) {
         setLayout(newLayout);
@@ -70,7 +80,7 @@ function CVEditor() {
     return (
         <div className="cv-editor">
             <EditModeToggle onChange={handleChange} currentMode={currentMode}/>
-            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} onLayoutChange={handleLayoutChange} />
+            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} onLayoutChange={handleLayoutChange} color={color} onColorChange={handleColorChange} />
             <CVPreview personalInfo={personalInfo} education={education} experience={experience} layout={layout} />
         </div>
     )
