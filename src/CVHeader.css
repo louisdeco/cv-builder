@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.col-pad {
+    padding: 3rem 1.5rem;
+}
+
 .full-name {
     margin-bottom: 0.6rem;
 }
