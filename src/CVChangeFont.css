@@ -1,0 +1,47 @@
+.cv-change-font {
+    background-color: white;
+    border-radius: 0.6rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttons-font-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.cv-change-font button {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    border: 1px solid grey;
+    padding: 0.5rem 0.8rem;
+}
+
+.typo {
+    font-size: 1.5rem;
+    font-weight: 450;
+
+}
+
+.selected {
+    color: white;
+    background-color: var(--accent-color) !important;
+}
+
+.button-sans {
+    font-family: "Rubik", sans-serif;
+}
+
+.button-serif {
+    font-family: "Lusitana", serif;
+}
+
+.button-mono {
+    font-family: "Roboto Mono", monospace;
+}

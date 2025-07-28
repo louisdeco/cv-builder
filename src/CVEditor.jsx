@@ -14,10 +14,24 @@ function CVEditor() {
     const [education, setEducation] = useState(sampleCV.education);
     const [layout, setLayout] = useState('top');
     const [color, setColor] = useState('#0e374e');
+    const [font, setFont] = useState('"Rubik", sans-serif');
 
     useEffect(() => {
         document.documentElement.style.setProperty('--accent-color', color)
+        document.documentElement.style.setProperty('--cv-font', font)
     }, [])
+
+    function handleFontChange(newFont) {
+        setFont(newFont);
+        document.documentElement.style.setProperty('--cv-font', newFont);
+        
+        // Smaller size for monospace to prevent overflow
+        if (newFont.includes('Mono')) {
+            document.documentElement.style.setProperty('--cv-font-size', '0.8rem');
+        } else {
+            document.documentElement.style.setProperty('--cv-font-size', '0.9rem');
+        }
+    }
 
     function handleColorChange(newColor) {
         setColor(newColor)
@@ -80,7 +94,7 @@ function CVEditor() {
     return (
         <div className="cv-editor">
             <EditModeToggle onChange={handleChange} currentMode={currentMode}/>
-            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} onLayoutChange={handleLayoutChange} color={color} onColorChange={handleColorChange} />
+            <CVEditPanel personalInfo={personalInfo} experience={experience} education={education} currentMode={currentMode} handlePersonalFieldChange={handlePersonalFieldChange} handleExperienceVisibilityToggle={handleExperienceVisibilityToggle} handleEducationVisibilityToggle={handleEducationVisibilityToggle} handleExperienceSave={handleExperienceSave} handleEducationSave={handleEducationSave} handleExperienceDelete={handleExperienceDelete} handleEducationDelete={handleEducationDelete} onLayoutChange={handleLayoutChange} color={color} onColorChange={handleColorChange} font={font} onFontChange={handleFontChange} />
             <CVPreview personalInfo={personalInfo} education={education} experience={experience} layout={layout} />
         </div>
     )

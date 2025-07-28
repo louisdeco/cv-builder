@@ -6,6 +6,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0e0e0;
     overflow-y: auto;
+    font-family: var(--cv-font, "Rubik", sans-serif);
+    font-size: var(--cv-font-size);
 }
 
 .cv-preview.layout-left,
